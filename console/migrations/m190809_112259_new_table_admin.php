@@ -10,7 +10,7 @@ class m190809_112259_new_table_admin extends Migration
     /**
 	 * @inheritdoc
 	 */
-	public function up()
+	public function down()
 	{
 		echo "Creando tabla de admin.\n";
 		$tableOptions = null;
@@ -43,7 +43,7 @@ class m190809_112259_new_table_admin extends Migration
 		$auth->addChild($administrator, $admin);
 	}
 	
-	public function down()
+	public function up()
 	{
 		echo "Borrando tabla de admin.\n";
 		$this->dropTable('admin');
