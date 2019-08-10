@@ -7,11 +7,14 @@ body {
     min-height: 100%;
     height: auto;
     margin: 0 auto -60px;
+        margin-left: auto;
     padding: 0 0 60px;
+    margin-left: 230px;
 }
 
 .wrap > .container {
     padding: 70px 15px 20px;
+	width: 90%;
 }
 
 .footer {
@@ -118,4 +121,144 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+
+.skin-black .main-header .logo{
+	color: #fff !important;
+	background-color: #000 !important;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.skin-black .main-header .navbar {
+	background-color: #000 !important;
+}
+
+.skin-black .main-header .navbar > .sidebar-toggle {
+    color: #fff !important;
+    border-right: 1px solid #fff !important;
+}
+
+.skin-black .main-header .navbar .nav > li > a {
+	color: #fff !important;
+}
+
+.skin-black .main-header .navbar .nav > li > a:hover {
+	background-color: #fff !important;
+	color: #000 !important;
+}
+
+.skin-black .main-header li.user-header {
+    background-color: #000 !important;
+}
+
+.skin-black .wrapper, .skin-black .main-sidebar, .skin-black .left-side {
+    background-color: #000 !important;
+}
+
+.skin-black .sidebar a {
+    color: #fff !important;
+}
+
+.skin-black .sidebar a:hover {
+    background-color: #dedede !important;
+    color: #5f5f5f !important;
+}
+
+.skin-black .sidebar-menu > li.header {
+    color: #fff !important;
+    background: #5f5f5f !important;
+}
+
+.skin-black .sidebar-form input[type="text"], .skin-black .sidebar-form .btn {
+    background-color: #dedede;
+}
+
+a {
+	color: #c57d00 !important;
+}
+
+a:hover {
+	color: #ffa200 !important;
+}
+
+.btn-primary:hover .glyphicon-plus-sign, .btn-primary:hover .glyphicon-minus-sign {
+	color: #c57d00;
+}
+
+.btn, .btn-primary, .btn-default, .btn-app {
+	color: #777777 !important;
+	background-color: #f4f4f4 !important;
+	border-color: #ddd !important;
+}
+
+.btn:hover, .btn-primary:hover, .btn-default:hover, .btn-app:hover {
+	color: #c57d00 !important;
+	border-color: #c57d00 !important;
+}
+
+#flat-guests, #flat-rooms, #flat-beds, #flat-bathrooms, #booking-guests {
+	text-align: center;
+}
+
+.box, .box.box-primary {
+    border-top-color: #c57d00 !important;
+    background: #f9f9f9 !important;
+}
+
+.image-flat-back {
+	height: 220px !important;
+}
+
+.callout.callout-info {
+    background-color: #4b4b4b !important;
+    border-color: #c57d00;
+}
+
+.thumbnail {
+	border-color: #c57d00 !important; 
+}
+
+.nav-tabs-custom > .nav-tabs > li.active {
+    border-top-color: #c57d00;
+}
+
+.booking_table {
+	width: 100%;
+}
+
+.booking_table th{
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.booking_table td {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.alert-error {
+	background-color: #c57d00 !important;
+	border-color: #777777 !important;
+}
+
+.year_chart {
+	text-align: center;
+	font-size: 18px;
+	color: #c57d00;
+}
+
+.icon-flag {
+	width: 35px;
+	height: 30px;
+}
+
+.icon-flag:hover {
+	background-color: #000;
+}
+
+.user-panel > .flag{
+	position: absolute;
+	left: 150px;
+	top: 30px;
 }
