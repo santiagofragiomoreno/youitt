@@ -18,8 +18,14 @@
  */
 return [
     'Clients' => 'Clients',
-    'Companys' => '',
+    'Address' => '',
     'CONTROL PANEL' => '',
+    'Companys' => '',
+    'Country Code' => '',
     'Dashboard' => '',
+    'Pantry id' => '',
+    'Postal Code' => '',
+    'Province' => '',
     'Search...' => '',
+    'pantry_id' => '@@@@',
 ];
