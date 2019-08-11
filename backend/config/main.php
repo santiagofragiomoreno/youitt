@@ -9,8 +9,15 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
+    'timeZone' => 'Europe/Madrid',
     'controllerNamespace' => 'backend\controllers',
-    'bootstrap' => ['log'],
+    'bootstrap' => [
+        'log',
+        [
+            'class' => 'common\components\LanguageSelector',
+            'supportedLanguages' => ['en', 'es'],
+        ],
+    ],
     'modules' => [],
     'components' => [
         'request' => [
@@ -49,8 +56,7 @@ return [
             'showScriptName' => false,
             'rules' => [
             ],
-        ],
-        
+        ], 
     ],
     'params' => $params,
 ];
