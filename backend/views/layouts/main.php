@@ -134,32 +134,19 @@ AppAsset::register($this);
 				<li>
 					<a href="<?= Url::toRoute(['/guest']) ?>"><i class="fa fa-user"></i> <span><?= Yii::t('backend', 'Companys') ?></span></a>
 				</li>
-				<li>
-					<a href="<?= Url::toRoute(['/booking']) ?>"><i class="fa fa-key"></i> <span>reservas</span></a>
-				</li>
+				
 				<li class="treeview">
-    				<a href='#'><i class="fa fa-bar-chart"></i> <span>admij </span><i class="fa fa-angle-left pull-right"></i></a>
+    				<a href='#'><i class="fa fa-bar-chart"></i> <span>Productos </span><i class="fa fa-angle-left pull-right"></i></a>
     				<ul class="treeview-menu" style="display:none;">
     					<li>
-    						<a href="<?= Url::toRoute(['/chart/revenue'])?>">ingresos</a>
-    					</li>
-    					<li>
-    						<a href="<?= Url::toRoute(['/chart/occupancy-select'])?>">disponibilidad</a>
+    						<a href="<?= Url::toRoute(['/productos/index'])?>">Ver productos</a>
     					</li>
     				</ul>
     			</li>
 				<li class="treeview">
     				<a href='#'><i class="fa fa-map-marker"></i> <span>gps </span><i class="fa fa-angle-left pull-right"></i></a>
     				<ul class="treeview-menu" style="display:none;">
-    					<li>
-    						<a href="<?= Url::toRoute(['/city/index'])?>">ciudades</a>
-    					</li>
-    					<li>
-    						<a href="<?= Url::toRoute(['/province/index'])?>">provincias</a>
-    					</li>
-    					<li>
-    						<a href="<?= Url::toRoute(['/country/index'])?>">paises</a>
-    					</li>
+    					
     				</ul>
     			</li>
 			</ul>
