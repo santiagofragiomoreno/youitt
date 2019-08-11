@@ -8,10 +8,15 @@ use Yii;
  * This is the model class for table "client".
  *
  * @property int $id
+ * @property int $pantry_id
  * @property string $username
  * @property string $surname
  * @property string $email
  * @property string $phone
+ * @property string $address
+ * @property int $postal_code
+ * @property string $province
+ * @property string $country_code 
  * @property string $password_hash
  * @property int $status
  * @property string $auth_key
@@ -71,10 +76,15 @@ class Client extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
+            'pantry_id' => Yii::t('backend', 'Pantry id'),
             'username' => Yii::t('app', 'Username'),
             'surname' => Yii::t('app', 'Surname'),
             'email' => Yii::t('app', 'Email'),
             'phone' => Yii::t('app', 'Phone'),
+            'adrress' => Yii::t('backend', 'Address'),
+            'postal_code' => Yii::t('backend','Postal Code'),
+            'province' => Yii::t('backend', 'Province'),
+            'country_code' => Yii::t('backend', 'Country Code'),
             'password_hash' => Yii::t('app', 'Password Hash'),
             'status' => Yii::t('app', 'Status'),
             'auth_key' => Yii::t('app', 'Auth Key'),

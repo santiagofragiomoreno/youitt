@@ -20,6 +20,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
     
+    <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
+    
+    <?= $form->field($model, 'postal_code')->textInput(['maxlength' => true]) ?>
+    
     <?= $form->field($model, 'password')->passwordInput() ?>
 
     <div class="form-group">
