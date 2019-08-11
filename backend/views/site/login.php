@@ -19,7 +19,7 @@ hiqdev\assets\icheck\iCheckAsset::register($this);
 ?>
 <div class="login-box">
     <div class="login-logo" style="margin-bottom: 0px;">
-        <img src="/images/logo-back-white.png" alt="Logo" style="width: 200px;">
+        <img src="/images/logo.png" alt="Logo" style="width: 200px;">
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body" style="border: 1px solid #c57d00;">

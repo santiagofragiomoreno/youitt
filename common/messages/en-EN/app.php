@@ -17,9 +17,17 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Account Confirm Token' => '',
+    'Auth Key' => '',
     'Clients' => 'Clients',
-    'Companys' => '',
-    'CONTROL PANEL' => '',
-    'Dashboard' => '',
-    'Search...' => '',
+    'Created At' => '',
+    'Email' => '',
+    'ID' => '',
+    'Password Hash' => '',
+    'Password Reset Token' => '',
+    'Phone' => '',
+    'Status' => '',
+    'Surname' => '',
+    'Updated At' => '',
+    'Username' => '',
 ];

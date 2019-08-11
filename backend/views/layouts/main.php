@@ -121,7 +121,7 @@ AppAsset::register($this);
     				<a href='#'><i class="fa fa-building"></i> <span> <?= Yii::t('backend', 'Clients') ?></span><i class="fa fa-angle-left pull-right"></i></a>
     				<ul class="treeview-menu" style="display:none;">
 						<li>
-							<a href="<?= Url::toRoute(['/flat']) ?>">piso</a>
+							<a href="<?= Url::toRoute(['/client/index']) ?>"><?= Yii::t('backend', 'Clients') ?></a>
 						</li>
 						<li>
 							<a href="<?= Url::toRoute(['/services']) ?>">servicios</a>
