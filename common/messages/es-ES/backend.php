@@ -17,15 +17,15 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Address' => 'Direccion',
     'CONTROL PANEL' => 'Panel de Control',
     'Clients' => 'Clientes',
     'Companys' => 'Empresas',
-    'Dashboard' => 'Escritorio',
-    'Search...' => 'Buscar',
-    'Address' => 'Direccion',
     'Country Code' => 'Codigo Pais',
+    'Dashboard' => 'Escritorio',
     'Pantry id' => 'Identificador Despensa',
     'Postal Code' => 'Codigo Postal',
     'Province' => 'Provincia',
+    'Search...' => 'Buscar',
     'pantry_id' => '@@@@',
 ];
