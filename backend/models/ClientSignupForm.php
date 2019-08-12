@@ -15,6 +15,10 @@ class ClientSignupForm extends Model
     public $email;
     public $password;
     public $phone;
+    public $address;
+    public $postal_code;
+    public $province;
+    public $country;
     
     
     /**
@@ -26,7 +30,7 @@ class ClientSignupForm extends Model
             ['username', 'trim'],
             ['username', 'required'],
             ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This username has already been taken.'],
-            [['username','surname'], 'string', 'min' => 2, 'max' => 255],
+            [['username','surname','address','province','country'], 'string', 'min' => 2, 'max' => 255],
             [['phone'], 'string', 'max' => 20],
             
             ['email', 'trim'],
@@ -37,6 +41,7 @@ class ClientSignupForm extends Model
             
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
+            ['postal_code','string','min' => 5]
         ];
     }
     
@@ -56,6 +61,10 @@ class ClientSignupForm extends Model
         $client->surname = $this->surname;
         $client->phone = $this->phone;
         $client->email = $this->email;
+        $client->address = $this->address;
+        $client->postal_code = $this->postal_code;
+        $client->province = $this->province;
+        $client->country_code = $this->country;
         $client->setPassword($this->password);
         $client->generateAuthKey();
         $client->generateEmailVerificationToken();

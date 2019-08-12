@@ -24,6 +24,10 @@ use yii\widgets\ActiveForm;
     
     <?= $form->field($model, 'postal_code')->textInput(['maxlength' => true]) ?>
     
+    <?= $form->field($model, 'province')->textInput(['maxlength' => true]) ?>
+    
+    <?= $form->field($model, 'country')->textInput(['maxlength' => true]) ?>
+    
     <?= $form->field($model, 'password')->passwordInput() ?>
 
     <div class="form-group">
