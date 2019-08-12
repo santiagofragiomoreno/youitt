@@ -27,4 +27,5 @@ return [
     'account_confirm_token' => '',
     'auth_key' => '',
     'password_reset_token' => '',
+    
 ];
