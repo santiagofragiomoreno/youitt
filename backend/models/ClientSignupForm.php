@@ -68,7 +68,7 @@ class ClientSignupForm extends Model
         $client->setPassword($this->password);
         $client->generateAuthKey();
         $client->generateEmailVerificationToken();
-        $this->sendEmail($client);
+        //$this->sendEmail($client);
         $client->save();
         return $client;
         
