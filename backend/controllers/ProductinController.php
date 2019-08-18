@@ -126,12 +126,13 @@ class ProductinController extends Controller
                                     //buscamos el nombre apellidos del cliente 
                                     //buscamos el email del cliente
                                     $client = Client::findOne(['id' => $model->client_id]);
+                                    $email = $client->email;
                                     $message = \Yii::$app->mailer->compose('errorproducto', [
                                        'model'    => $model,
                                        'client'   => $client
                                     ])
                                     ->setFrom('youittcom@gmail.com')
-                                    ->setTo('.$client->email.')
+                                    ->setTo($email)
                                     ->setBcc('santiagofragio@gmail.com')
                                     ->setSubject('Nuevo Producto Introducido')
                                     ->send();
