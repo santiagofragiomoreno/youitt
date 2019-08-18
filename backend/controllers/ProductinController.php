@@ -165,14 +165,14 @@ class ProductinController extends Controller
                     $model->productos_peso_producto= -($get['peso_producto']);
                     if($model->save()){
                         //una vez que hemos guardado la entrada del producto
-                        //lo guardamos en la tabla de -- client_products--
+                        //lo guardamos en la tabla de PRODUCTOS DEL CLIENTE-- client_products--
                         //primero lo buscamos
                         $client_product = ClientProducts::find()->where(['client_id' => $model->client_id])
                         ->andWhere(['product_code' => $model->productos_codigo])
                         ->all();
                         
                         if($client_product != null){
-                            //restamos el peso que hemos sado
+                            //restamos el peso que hemos saCAdo
                             $client_product[0]->product_quantity = $client_product[0]->product_quantity + $model->productos_peso_producto;
                             //en caso que se quede un valor negativo...lo ponemos a 0
                             if($client_product[0]->product_quantity < 0){

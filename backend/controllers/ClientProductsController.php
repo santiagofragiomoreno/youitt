@@ -8,6 +8,7 @@ use backend\models\search\ClientProductsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use common\models\Productos;
 
 /**
  * ClientProductsController implements the CRUD actions for ClientProducts model.
@@ -67,7 +68,22 @@ class ClientProductsController extends Controller
         $model = new ClientProducts();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            //una vez que se lo hemos guardado al cliente//aprovechamos y lo añadimos a la BBDD general
+            $product = new Productos();
+            $product->codigo = $model->product_code;
+            $product->nombre = $model->product_name;
+            $product->peso_producto = 0;
+            if($product->save()){
+                //podriamos meter un hasflash PRODUCTO AÑADIDO TAMBIEN A LA BBDD GENERAL
+                \Yii::$app->getSession()->setFlash('success');
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+            else{
+                \Yii::$app->getSession()->setFlash('error');
+                return $this->render('create', [
+                    'model' => $model,
+                ]);
+            }
         }
 
         return $this->render('create', [
@@ -87,7 +103,18 @@ class ClientProductsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            $code = $model->product_code;
+            $product = Productos::findOne(['codigo' => $code]);
+            $product->nombre = $model->product_name;
+            if($product->save()){
+                \Yii::$app->getSession()->setFlash('success');
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+            else{
+                return $this->render('update', [
+                    'model' => $model,
+                ]);
+            }
         }
 
         return $this->render('update', [
