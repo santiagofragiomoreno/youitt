@@ -124,7 +124,7 @@ AppAsset::register($this);
 							<a href="<?= Url::toRoute(['/client/index']) ?>"><?= Yii::t('backend', 'Clients') ?></a>
 						</li>
 						<li>
-							<a href="<?= Url::toRoute(['/services']) ?>">servicios</a>
+							<a href="<?= Url::toRoute(['client-products/index']) ?>"><?= Yii::t('backend', 'Clients Products') ?></a>
 						</li>
 						<li>
 							<a href="<?= Url::toRoute(['/uses']) ?>">uso</a>

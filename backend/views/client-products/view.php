@@ -14,7 +14,12 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="client-products-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
+    <?php if(Yii::$app->session->hasFlash('success')):?>
+    	<div class="alert alert-success">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<?= Yii::t('backend', 'Product also added to the general database') ?>
+		</div>
+    <?php endif;?>
     <p>
         <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
