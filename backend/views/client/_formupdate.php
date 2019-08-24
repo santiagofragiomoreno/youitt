@@ -28,7 +28,6 @@ use yii\widgets\ActiveForm;
     
     <?= $form->field($model, 'country_code')->textInput(['maxlength' => true]) ?>
     
-    <?= $form->field($model, 'password')->passwordInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
@@ -37,3 +36,4 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+

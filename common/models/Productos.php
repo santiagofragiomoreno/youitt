@@ -44,7 +44,7 @@ class Productos extends \yii\db\ActiveRecord
             'id_producto' => Yii::t('app', 'Id Producto'),
             'codigo' => Yii::t('app', 'Codigo'),
             'nombre' => Yii::t('app', 'Nombre'),
-            'peso_producto' => Yii::t('app', 'Peso Producto'),
+            'peso_producto' => Yii::t('backend', 'Peso Producto'),
         ];
     }
 }

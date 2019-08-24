@@ -44,10 +44,10 @@ class ClientProducts extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'client_id' => Yii::t('app', 'Client ID'),
-            'product_code' => Yii::t('app', 'Product Code'),
-            'product_name' => Yii::t('app', 'Product Name'),
-            'product_quantity' => Yii::t('app', 'Product Quantity'),
+            'client_id' => Yii::t('backend', 'Client ID'),
+            'product_code' => Yii::t('backend', 'Product Code'),
+            'product_name' => Yii::t('backend', 'Product Name'),
+            'product_quantity' => Yii::t('backend', 'Product Quantity'),
         ];
     }
 }
