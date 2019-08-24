@@ -44,7 +44,13 @@ class ClientProductsSearch extends ClientProducts
         $query = ClientProducts::find();
 
         // add conditions that should always apply here
-
+        if(isset($params['ClientProductsSearch']['client_id'])  != null){
+            $this->client_id = $params['ClientProductsSearch']['client_id'];
+        }
+        else if($params!=null){
+            $this->client_id = $params['id'];
+        }
+        
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);

@@ -75,12 +75,12 @@ class Client extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
+            'id' => Yii::t('backend', 'ID'),
             'pantry_id' => Yii::t('backend', 'Pantry id'),
-            'username' => Yii::t('app', 'Username'),
-            'surname' => Yii::t('app', 'Surname'),
+            'username' => Yii::t('backend', 'Username'),
+            'surname' => Yii::t('backend', 'Surname'),
             'email' => Yii::t('app', 'Email'),
-            'phone' => Yii::t('app', 'Phone'),
+            'phone' => Yii::t('backend', 'Phone'),
             'adrress' => Yii::t('backend', 'Address'),
             'postal_code' => Yii::t('backend','Postal Code'),
             'province' => Yii::t('backend', 'Province'),
@@ -90,8 +90,8 @@ class Client extends \yii\db\ActiveRecord
             'auth_key' => Yii::t('app', 'Auth Key'),
             'password_reset_token' => Yii::t('app', 'Password Reset Token'),
             'account_confirm_token' => Yii::t('app', 'Account Confirm Token'),
-            'created_at' => Yii::t('app', 'Created At'),
-            'updated_at' => Yii::t('app', 'Updated At'),
+            'created_at' => Yii::t('backend', 'Created At'),
+            'updated_at' => Yii::t('backend', 'Updated At'),
         ];
     }
     

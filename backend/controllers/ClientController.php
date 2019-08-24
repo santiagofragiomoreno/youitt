@@ -9,7 +9,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use backend\models\ClientSignupForm;
-
+use common\models\ClientProducts;
+use backend\models\search\ClientProductsSearch;
 /**
  * ClientController implements the CRUD actions for Client model.
  */
@@ -137,5 +138,30 @@ class ClientController extends Controller
         }
 
         throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
+    }
+    
+    public function actionProducts($id){
+        
+        $searchModel = new ClientProductsSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        
+        return $this->render('products', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+        //con el id del clientes buscamos en la tabla tosdos sus productos
+        /*$products = ClientProducts::find(['client_id' => $id])->all();
+        
+        if($products != null){
+            return $this->render('products', ['products' => $products]);
+        }
+        
+        
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);*/
     }
 }
